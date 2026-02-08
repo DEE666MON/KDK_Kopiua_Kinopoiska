@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main {
+    padding-top: 70px;
+    max-width: 1280px;
+    margin: auto;
+}
+.m_left_buttons {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 180px;
+    padding: 20px;
+}
+.m_left_btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+.m_left_btn_img {
+    padding: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    mask-image: var(--icon-path);
+    mask-size: 20px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: all 0.3s ease;
+}
+.main {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 220px;
+    padding: 30px 50px;
+}
+.m_trailer_contentS {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, black 25%, rgba(0, 0, 0, 0) 50%);
+    width: 955px;
+    height: 335px;
+    padding: 20px 40px 0 40px;
+}
+.m_trailer_content {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, black 25%, rgba(0, 0, 0, 0) 50%);
+    width: 955px;
+    height: 335px;
+    padding: 20px 40px 0 40px;
+    margin-top: 30px;
+}
+.m_trailer_content_video_bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.m_trailer_content_IML {
+    width: auto;
+    height: 60px;
+    margin-bottom: 5px;
+}
+.m_trailer_content_p {
+    margin: 0 60% 0 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.m_trailer_content_bottom {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.m_trailer_content_bottom p{
+    font-weight: 600;
+    font-size: 22px;
+    color: darkorange;
+}
+.m_trailer_content_btns {
+    display: flex;
+}
+.m_trailer_content_btn_img {
+    padding: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    mask-image: var(--icon-path);
+    mask-size: auto;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: all 0.3s ease;
+}
+.m_trailer_content_btn1 {
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    background: linear-gradient(150deg, darkorange 50%, yellow);
+    padding: 10px 20px 10px 10px;
+    margin-right: 8px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.m_trailer_content_btn2 {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+/* main animation */
+.m_left_btn:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+.m_left_btn:focus-within {
+    color: rgba(0, 0, 0, 0.9);
+}
+.m_left_btn:hover .m_left_btn_img {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.m_left_btn:focus-within .m_left_btn_img {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.m_trailer_content_btn1:hover {
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+.m_trailer_content_btn1:focus-within {
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+.m_trailer_content_btn1:hover .m_trailer_content_btn_img {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.m_trailer_content_btn1:focus-within .m_trailer_content_btn_img {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.m_trailer_content_btn2:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+.m_trailer_content_btn2:focus-within {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+.m_trailer_content_btn2:hover .m_trailer_content_btn_img {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.m_trailer_content_btn2:focus-within .m_trailer_content_btn_img {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+/* main animation */

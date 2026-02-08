@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/player.css">
+        <title>Проигрыватель</title>
+    </head>
+    <body>
+        <div class="player" id="player">
+            <video id="video" src="../assets/video/trailer_Iron_man_1_2008_modified.mp4" muted autoplay loop playsinline></video>
+            <div id="watchOrSkipBtns" class="watchOrSkipBtns">
+                <button id="watchBtn" class="wosBtn">Смотреть</button>
+                <button id="skipBtn" class="wosBtn">Пропустить</button>
+            </div>
+            <div class="controls">
+                <button id="playBtn">▶</button>
+                <input type="range" id="seek" min="0" value="0" step="0.01">
+                <span id="time">0:00/0:00</span>
+                <button id="fsBtn">⛶</button>
+            </div>
+        </div>
+    </body>
+    <script src="../js/player.js"></script>
+</html>

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.headerS {
+    position: fixed;
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    z-index: 10;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(20, 20, 20);
+    max-width: 1280px;
+    margin: auto;
+    height: 40px;
+    width: 100%;
+    padding: 15px 0;
+}
+a {
+    display: flex;
+}
+/* h1 {
+    color: red;
+    font-size: 100px;
+    text-align: center;
+} */
+.logo {
+    width: 175px;
+    height: fit-content;
+}
+.h_btn {
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.h_btn_img {
+    padding: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* https://codebeautify.org/svg-to-base64-converter
+    1) Загрузить svg файл с помощью кнопки 'UPLOAD';
+    2) Выбрать файл svg;
+    3) Всё что нужно ниже этой строки 'CSS Background Source';
+    4) Скопировать всё что внутри скобок функции url. */
+    /* mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDEzLjU3MTNMMTMuNTcxMyAwLjk5OTk2MkwxNi4wNjMyIDMuNDkxODRMMTYuMDYzMSAzLjQ5MTkyQzE0LjgzNTggNC43MTkyNyAxNC44MzU4IDYuNzA5MiAxNi4wNjMxIDcuOTM2NTVDMTcuMjkwNSA5LjE2MzkgMTkuMjgwNCA5LjE2MzkgMjAuNTA3OCA3LjkzNjU1TDIwLjUwNzggNy45MzY0OEwyMi45OTk4IDEwLjQyODVMMTAuNDI4NSAyMi45OTk4TDcuOTM2NzQgMjAuNTA4QzkuMTUzMDggMTkuMjc5OCA5LjE0OTQyIDE3LjI5ODEgNy45MjU3NCAxNi4wNzQ0QzYuNzAyMDcgMTQuODUwOCA0LjcyMDM3IDE0Ljg0NzEgMy40OTIxNSAxNi4wNjM0TDEgMTMuNTcxM1pNOC45OTkxMyAxMC40NTczTDEzLjc4MTcgMTUuMjM5OUwxNS40Nzg4IDEzLjU0MjhMMTAuNjk2MiA4Ljc2MDI0TDguOTk5MTMgMTAuNDU3M1oiIGZpbGw9J3JnYmEoMjU1LCAyNTUsIDI1NSwgMC42KScvPgo8L3N2Zz4K'); */
+    /* или */
+    /* mask-image: url('../assets/orig2.svg'); */
+    /* или */
+    mask-image: var(--icon-path);
+    mask-size: auto;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: all 0.3s ease;
+}
+#h_btn_sub {
+    /* background-color: rgb(150, 150, 150); */
+    background: linear-gradient(150deg, white, blue, red);
+    width: auto;
+    height: 28px;
+    border-radius: 25px;
+    padding: 5px 35px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.h_btn_sub {
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.h_btn_user_img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 2.5px solid rgb(23, 23, 23);
+}
+#h_btn_user {
+    background-color: white;
+    border-radius: 100%;
+    border: 2.5px solid transparent;
+    background: linear-gradient(150deg, white, blue, red) border-box;
+}
+.h_search {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 10px;
+    width: 30%;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+.h_search_input {
+    opacity: 1;
+    margin-left: 10px;
+    padding: 5px;
+    height: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+}
+.h_search_input::placeholder {
+    color: rgba(0, 0, 0, 0.67)
+}
+.h_search_btns {
+    display: flex;
+    align-items: center;
+}
+.h_search_settings_btn {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+.h_search_settings_btn .h_btn_img {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.h_search_btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+.h_search_btn .h_btn_img {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* header animation */
+.h_btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+.h_btn:focus-within {
+    color: rgba(255, 255, 255, 0.9);
+}
+.h_btn:hover .h_btn_img {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.h_btn:focus-within .h_btn_img {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+/* .h_btn_img:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.h_btn_img:focus-within {
+    background-color: rgba(0, 0, 0, 0.9);
+} */
+#h_btn_sub:hover {
+    background: linear-gradient(330deg, white, blue, red);
+}
+.h_btn_sub:hover {
+    transform: scale(1.1);
+}
+#h_btn_sub:focus-within {
+    background: linear-gradient(330deg, white, blue, red);
+}
+.h_btn_sub:focus-within {
+    transform: scale(1.1);
+}
+.h_search:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.h_search:has(.h_search_input:focus) {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.h_search_settings_btn:hover .h_btn_img {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.h_search_settings_btn:focus-within .h_btn_img {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.h_search_btn:hover .h_btn_img {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.h_search_btn:focus-within .h_btn_img {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* header animation */
+/* .main_menu_div > ul{
+    display: flex;
+} */

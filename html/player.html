@@ -7,7 +7,16 @@
     </head>
     <body>
         <div class="player" id="player">
-            <video id="video" src="../assets/video/trailer_Iron_man_1_2008_modified.mp4" muted autoplay loop playsinline></video>
+            <div class="divEB">
+                <a href="../html/index.html" class="playerEB"><div class="playerExitBtn" style="--icon-path: url('../assets/player_krestik_dlua_vihoda.svg')"></div></a>
+            </div>
+            <div class="divVN">
+                <img class="videoName" src="../assets/m_trailer_content_IronMan1Logo.png">
+            </div>
+            <div class="divVA">
+                <p class="videoAge" style="font-size: 18px;">16+</p>
+            </div>
+            <video id="video" src="../assets/video/trailer_Iron_man_1_2008_modified.mp4" autoplay loop playsinline></video>
             <div id="watchOrSkipBtns" class="watchOrSkipBtns">
                 <button id="watchBtn" class="wosBtn">Смотреть</button>
                 <button id="skipBtn" class="wosBtn">Пропустить</button>
@@ -16,6 +25,7 @@
                 <button id="playBtn">▶</button>
                 <input type="range" id="seek" min="0" value="0" step="0.01">
                 <span id="time">0:00/0:00</span>
+                <button id="mvBtn">🔊</button>
                 <button id="fsBtn">⛶</button>
             </div>
         </div>

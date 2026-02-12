@@ -23,11 +23,6 @@ header {
 a {
     display: flex;
 }
-/* h1 {
-    color: red;
-    font-size: 100px;
-    text-align: center;
-} */
 .logo {
     width: 175px;
     height: fit-content;
@@ -44,15 +39,6 @@ a {
     width: 20px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.6);
-    /* https://codebeautify.org/svg-to-base64-converter
-    1) Загрузить svg файл с помощью кнопки 'UPLOAD';
-    2) Выбрать файл svg;
-    3) Всё что нужно ниже этой строки 'CSS Background Source';
-    4) Скопировать всё что внутри скобок функции url. */
-    /* mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDEzLjU3MTNMMTMuNTcxMyAwLjk5OTk2MkwxNi4wNjMyIDMuNDkxODRMMTYuMDYzMSAzLjQ5MTkyQzE0LjgzNTggNC43MTkyNyAxNC44MzU4IDYuNzA5MiAxNi4wNjMxIDcuOTM2NTVDMTcuMjkwNSA5LjE2MzkgMTkuMjgwNCA5LjE2MzkgMjAuNTA3OCA3LjkzNjU1TDIwLjUwNzggNy45MzY0OEwyMi45OTk4IDEwLjQyODVMMTAuNDI4NSAyMi45OTk4TDcuOTM2NzQgMjAuNTA4QzkuMTUzMDggMTkuMjc5OCA5LjE0OTQyIDE3LjI5ODEgNy45MjU3NCAxNi4wNzQ0QzYuNzAyMDcgMTQuODUwOCA0LjcyMDM3IDE0Ljg0NzEgMy40OTIxNSAxNi4wNjM0TDEgMTMuNTcxM1pNOC45OTkxMyAxMC40NTczTDEzLjc4MTcgMTUuMjM5OUwxNS40Nzg4IDEzLjU0MjhMMTAuNjk2MiA4Ljc2MDI0TDguOTk5MTMgMTAuNDU3M1oiIGZpbGw9J3JnYmEoMjU1LCAyNTUsIDI1NSwgMC42KScvPgo8L3N2Zz4K'); */
-    /* или */
-    /* mask-image: url('../assets/orig2.svg'); */
-    /* или */
     mask-image: var(--icon-path);
     mask-size: auto;
     mask-repeat: no-repeat;
@@ -60,7 +46,6 @@ a {
     transition: all 0.3s ease;
 }
 #h_btn_sub {
-    /* background-color: rgb(150, 150, 150); */
     background: linear-gradient(150deg, white, blue, red);
     width: auto;
     height: 28px;
@@ -148,12 +133,6 @@ a {
 .h_btn:focus-within .h_btn_img {
     background-color: rgba(255, 255, 255, 0.9);
 }
-/* .h_btn_img:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-.h_btn_img:focus-within {
-    background-color: rgba(0, 0, 0, 0.9);
-} */
 #h_btn_sub:hover {
     background: linear-gradient(330deg, white, blue, red);
 }
@@ -185,6 +164,3 @@ a {
     background-color: rgba(0, 0, 0, 0.9);
 }
 /* header animation */
-/* .main_menu_div > ul{
-    display: flex;
-} */

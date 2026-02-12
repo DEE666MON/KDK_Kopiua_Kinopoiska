@@ -100,9 +100,17 @@ seek.addEventListener("change", () => {
 seek.addEventListener("focus", () => {
     updateSkipButton(true, Number(seek.value))
 })
-const player = document.getElementById('player')
-const fsBtn = document.getElementById('fsBtn')
+const player = document.getElementById("player")
+const mvBtn = document.getElementById("mvBtn")
+const fsBtn = document.getElementById("fsBtn")
 
+function syncMuteVideoIcon() {
+    mvBtn.textContent = video.muted ? "🔇" : "🔊"
+}
+function muteVideoBtn() {
+    video.muted = !video.muted
+    syncMuteVideoIcon()
+}
 function isFullScreen() {
     return document.fullscreenElement === player
 }
@@ -118,14 +126,11 @@ async function toggleFullScreen() {
     }
 }
 
+mvBtn.addEventListener("click", muteVideoBtn)
 fsBtn.addEventListener("click", toggleFullScreen)
 window.addEventListener("keydown", (e) => {
     if (e.key.toLowerCase() !== "f" || e.repeat) return
     toggleFullScreen()
-})
-window.addEventListener("keydown", (e) => {
-    if (e.key.toLowerCase() !== "k" || e.repeat) return
-    playOrPauseVideo()
 })
 window.addEventListener("keydown", (e) => {
     if (e.code === "Space") {
@@ -133,6 +138,13 @@ window.addEventListener("keydown", (e) => {
         showControls()
         if (e.repeat) return
         playOrPauseVideo()
+        return
+    }
+    if (e.code === "KeyM") {
+        e.preventDefault()
+        showControls()
+        if (e.repeat) return
+        muteVideoBtn()
         return
     }
     if (e.code === "ArrowRight") {
@@ -149,18 +161,32 @@ window.addEventListener("keydown", (e) => {
         return
     }
 })
+video.addEventListener("click", () => {
+    showControls()
+    playOrPauseVideo()
+})
+video.addEventListener("dblclick", () => {
+    toggleFullScreen()
+})
 const controls = document.querySelector(".controls")
+const divEB = document.querySelector(".divEB")
+const divVN = document.querySelector(".divVN")
+const divVA = document.querySelector(".divVA")
 let hideTimer = null
 
 function hideControlNow() {
     if (!video.paused) {
         controls.classList.add("hidden")
-        // wosBtns.classList.add("hidden")
+        divEB.classList.add("hidden")
+        divVN.classList.add("hidden")
+        divVA.classList.add("hidden")
     }
 }
 function showControls() {
     controls.classList.remove("hidden")
-    // wosBtns.classList.remove("hidden")
+    divEB.classList.remove("hidden")
+    divVN.classList.remove("hidden")
+    divVA.classList.remove("hidden")
     if (hideTimer) clearTimeout(hideTimer)
     hideTimer = setTimeout(() => {hideControlNow()}, HIDE_DELAY)
 }
@@ -169,5 +195,6 @@ window.addEventListener("mousemove", showControls)
 player.addEventListener("mouseleave", hideControlNow)
 
 syncPlayIcon()
+syncMuteVideoIcon()
 loadedMetaData()
 showControls()
